@@ -37,8 +37,8 @@
 #endif
 
 #include <gst/gst.h>
-#include <gst/base/gstbasetransform.h>
-#include <gst/controller/gstcontroller.h>
+#include <gst/base/base.h>
+#include <gst/controller/controller.h>
 
 #include "gsttransform.h"
 
@@ -180,7 +180,7 @@ gst_plugin_template_transform_ip (GstBaseTransform * base, GstBuffer * outbuf)
   GstPluginTemplate *filter = GST_PLUGIN_TEMPLATE (base);
 
   if (GST_CLOCK_TIME_IS_VALID (GST_BUFFER_TIMESTAMP (outbuf)))
-    gst_object_sync_values (G_OBJECT (filter), GST_BUFFER_TIMESTAMP (outbuf));
+    gst_object_sync_values (GST_OBJECT (filter), GST_BUFFER_TIMESTAMP (outbuf));
 
   if (filter->silent == FALSE)
     g_print ("I'm plugged, therefore I'm in.\n");
@@ -199,9 +199,6 @@ gst_plugin_template_transform_ip (GstBaseTransform * base, GstBuffer * outbuf)
 static gboolean
 plugin_init (GstPlugin * plugin)
 {
-  /* initialize gst controller library */
-  gst_controller_init(NULL, NULL);
-
   return gst_element_register (plugin, "plugin", GST_RANK_NONE,
       GST_TYPE_PLUGIN_TEMPLATE);
 }
