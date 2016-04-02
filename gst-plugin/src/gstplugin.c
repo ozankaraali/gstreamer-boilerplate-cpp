@@ -199,10 +199,13 @@ gst_plugin_template_get_property (GObject * object, guint prop_id,
 static gboolean
 gst_plugin_template_sink_event (GstPad * pad, GstObject * parent, GstEvent * event)
 {
-  gboolean ret;
   GstPluginTemplate *filter;
+  gboolean ret;
 
   filter = GST_PLUGIN_TEMPLATE (parent);
+
+  GST_LOG_OBJECT (filter, "Received %s event: %" GST_PTR_FORMAT,
+      GST_EVENT_TYPE_NAME (event), event);
 
   switch (GST_EVENT_TYPE (event)) {
     case GST_EVENT_CAPS:
