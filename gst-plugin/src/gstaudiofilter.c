@@ -333,8 +333,8 @@ plugin_init (GstPlugin * plugin)
 GST_PLUGIN_DEFINE (
     GST_VERSION_MAJOR,
     GST_VERSION_MINOR,
-    audiofiltertemplateplugin,
-    "Audio filter template plugin",
+    audiofilterexample,
+    "Audio filter example plugin",
     plugin_init,
     VERSION, "LGPL",
     "GStreamer",
