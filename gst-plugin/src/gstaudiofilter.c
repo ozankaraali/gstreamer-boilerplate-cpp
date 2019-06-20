@@ -336,7 +336,8 @@ GST_PLUGIN_DEFINE (
     audiofilterexample,
     "Audio filter example plugin",
     plugin_init,
-    VERSION, "LGPL",
-    "GStreamer",
-    "http://gstreamer.freedesktop.org"
+    PACKAGE_VERSION,
+    GST_LICENSE,
+    GST_PACKAGE_NAME,
+    GST_PACKAGE_ORIGIN
 );

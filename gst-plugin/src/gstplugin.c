@@ -281,8 +281,8 @@ GST_PLUGIN_DEFINE (
     plugin,
     "Template plugin",
     plugin_init,
-    VERSION,
-    "LGPL",
-    "GStreamer",
-    "http://gstreamer.net/"
+    PACKAGE_VERSION,
+    GST_LICENSE,
+    GST_PACKAGE_NAME,
+    GST_PACKAGE_ORIGIN
 )
