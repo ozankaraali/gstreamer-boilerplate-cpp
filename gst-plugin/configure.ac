@@ -2,7 +2,7 @@ dnl required version of autoconf
 AC_PREREQ([2.53])
 
 dnl TODO: fill in your package name and package version here
-AC_INIT([my-plugin-package],[1.0.0])
+AC_INIT([my-filter],[1.0.0])
 
 dnl required versions of gstreamer and plugins-base
 GST_REQUIRED=1.0.0
@@ -18,7 +18,8 @@ dnl enable mainainer mode by default
 AM_MAINTAINER_MODE([enable])
 
 dnl check for tools (compiler etc.)
-AC_PROG_CC
+AC_PROG_CXX
+AC_LANG([C++])
 
 dnl required version of libtool
 LT_PREREQ([2.2.6])
