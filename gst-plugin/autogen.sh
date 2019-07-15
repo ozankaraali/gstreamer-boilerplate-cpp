@@ -3,6 +3,10 @@
 # ACLOCAL, AUTOPOINT and/or LIBTOOLIZE to the right versions, or leave them
 # unset and get the defaults
 
+git clean -fx
+rm -rf ./src/.deps/
+rm -rf ./src/.libs/
+
 autoreconf --verbose --force --install --make || {
  echo 'autogen.sh failed';
  exit 1;
