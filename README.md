@@ -1,4 +1,4 @@
-# gst-plugin-cpp
+# GST C++ PLUGIN BOILERPLATE
 
 This git module contains template code for possible GStreamer plugin projects
 with C++.
@@ -37,6 +37,10 @@ GStreamer). Alternatively, you will find your plugin binary in
 gst-plugins/src/.libs/ as libgstplugin.so or similar (the extension may vary),
 so you can also set the GST_PLUGIN_PATH environmen variable to the
 gst-plugins/src/.libs/ directory (best to specify an absolute path though).
+To enable plugins, add it to your bashrc or run the line below in your 
+terminal:
+
+    export GST_PLUGIN_PATH='/usr/local/lib/gstreamer-1.0'
 
 You can also check if it has been built correctly with:
 
