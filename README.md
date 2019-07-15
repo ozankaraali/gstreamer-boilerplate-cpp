@@ -1,4 +1,4 @@
-# GST C++ PLUGIN BOILERPLATE
+# GStreamer C++ Plugin Boilerplate
 
 This git module contains template code for possible GStreamer plugin projects
 with C++.
@@ -48,5 +48,7 @@ You can also check if it has been built correctly with:
 
 
 [1] http://www.opensource.org/licenses/mit-license.php or COPYING.MIT
+
 [2] http://www.opensource.org/licenses/lgpl-license.php or COPYING.LIB
+
 [3] http://gstreamer.freedesktop.org/documentation/licensing.html
