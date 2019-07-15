@@ -61,7 +61,7 @@
 #endif
 
 #include <gst/gst.h>
-
+#include <iostream>
 #include "gstmyfilter.h"
 
 GST_DEBUG_CATEGORY_STATIC (gst_my_filter_debug);
@@ -237,7 +237,9 @@ gst_my_filter_chain (GstPad * pad, GstObject * parent, GstBuffer * buf)
   filter = GST_MYFILTER (parent);
 
   if (filter->silent == FALSE)
-    g_print ("I'm plugged, therefore I'm in.\n");
+    g_print ("Loaded!");
+    // Now we can use iostream C++:
+    std::cout<< "Test" <<std::endl; 
 
   /* just push out the incoming buffer without touching it */
   return gst_pad_push (filter->srcpad, buf);

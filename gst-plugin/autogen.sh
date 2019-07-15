@@ -16,3 +16,6 @@ autoreconf --verbose --force --install --make || {
 echo
 echo "Now type 'make' to compile this module."
 echo
+
+make
+sudo make install
