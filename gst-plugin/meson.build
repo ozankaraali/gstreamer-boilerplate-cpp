@@ -14,26 +14,13 @@ gstaudio_dep = dependency('gstreamer-audio-1.0',
 
 # Plugin 1
 plugin_sources = [
-  'src/gstplugin.c'
+  'src/gstmyfilter.c'
   ]
 
-gstpluginexample = library('gstplugin',
+gstmyfilterexample = library('gstmyfilter',
   plugin_sources,
   c_args: plugin_c_args,
   dependencies : [gst_dep],
-  install : true,
-  install_dir : plugins_install_dir,
-)
-
-# Plugin 2 (audio filter example)
-audiofilter_sources = [
-  'src/gstaudiofilter.c',
-  ]
-
-gstaudiofilterexample = library('gstaudiofilterexample',
-  audiofilter_sources,
-  c_args: plugin_c_args,
-  dependencies : [gst_dep, gstaudio_dep],
   install : true,
   install_dir : plugins_install_dir,
 )
